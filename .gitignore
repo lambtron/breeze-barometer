@@ -20,8 +20,17 @@ coverage
 build/Release
 
 # Dependency directory
+<<<<<<< HEAD
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 
 ./config/config.js
+=======
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# Users Environment Variables
+.lock-wscript
+>>>>>>> 22b774e36c808b6e05e6dfa5519a4c00b3902bcf
