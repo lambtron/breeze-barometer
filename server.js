@@ -8,7 +8,7 @@ var express = require('express')
   , port = process.env.PORT || 3000;
 
 // Set environmental variables. ================================================
-if (!process.env.YO_API_TOKEN)
+if (!process.env.TREASURE_DATA_API_KEY)
   require('./config/config');
 
 // Configuration ===============================================================
@@ -21,9 +21,6 @@ require('./config/routes.js')(app);
 
 // Database.
 require('./app/lib/db_connect');
-
-// New relic.
-// require('newrelic');
 
 // Listen (start app with node server.js) ======================================
 server.listen(port, function() {

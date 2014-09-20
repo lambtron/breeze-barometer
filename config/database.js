@@ -2,12 +2,9 @@
 
 (function() {
   // Server.js is going to retrieve database.url.
-  var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL
-    || 'mongodb://localhost/worldcup';
-
+  var TREASURE_DATA_API_KEY = process.env.TREASURE_DATA_API_KEY;
   module.exports = {
     // The database url to connect.
-    url: mongoUri
+    url: TREASURE_DATA_API_KEY
   }
-
 }());
