@@ -9,6 +9,7 @@ barometer.controller('setupController',
     end: '',
     startIsValid: true,
     endIsValid: true,
+    funnelString: '',
     submit: function submit() {
       // transform start and end to milliseconds
       // updated_at
@@ -19,6 +20,7 @@ barometer.controller('setupController',
       $http.post('/api/funnel', {load: load})
       .success(function(data) {
         console.log(data);
+        query.funnelString = JSON.stringify(data, null, 2);
       });
     }
   };
