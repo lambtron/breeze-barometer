@@ -5,7 +5,7 @@ var fs = require("fs");
 var readline = require("readline");
 var stream = require("stream");
 
-var conString = "pg://andyjiang:password@localhost:5432/template1";
+var conString = process.env.DATABASE_URL;
 var filepath = process.argv[2];
 var instream = fs.createReadStream(filepath);
 var outstream = new stream;
