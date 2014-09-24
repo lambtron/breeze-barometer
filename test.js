@@ -52,6 +52,6 @@ rl.on('line', function(line) {
 });
 
 rl.on('close', function() {
-  client.end();
+  // client.end();
   console.log("That's a wrap!");
 });
