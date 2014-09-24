@@ -17,6 +17,6 @@
     "express": "3.x",
     "underscore": "latest",
     "request": "latest",
-    "mongoose": "latest"
+    "pg": "latest"
   }
 }

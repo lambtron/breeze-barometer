@@ -8,7 +8,7 @@ var express = require('express')
   , port = process.env.PORT || 3000;
 
 // Set environmental variables. ================================================
-if (!process.env.TREASURE_DATA_API_KEY)
+if (!process.env.DATABASE_URL)
   require('./config/config');
 
 // Configuration ===============================================================
@@ -20,7 +20,7 @@ app.use(express.bodyParser());
 require('./config/routes.js')(app);
 
 // Database.
-require('./app/lib/db_connect');
+// require('./app/lib/db_connect');
 
 // Listen (start app with node server.js) ======================================
 server.listen(port, function() {

@@ -14,6 +14,8 @@ f.each_line do |line|
   arr = JSON.parse(line)
   funnel = {}
   arr.each do |user|
+    # pp user
+
     neighborhood = user['neighborhood']
     unless neighborhood.nil?
       neighborhood = neighborhood.gsub(/[^0-9a-z ]/i, '').tr(" ", "_")

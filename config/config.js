@@ -1,1 +1,1 @@
-process.env.TREASURE_DATA_API_KEY = '5151/cb591491d8c01cc1d8136d255fbb0b3470716f64';
+process.env.DATABASE_URL = 'postgres://andyjiang:password@localhost:5432/template1';

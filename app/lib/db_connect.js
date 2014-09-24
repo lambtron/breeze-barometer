@@ -1,10 +1,18 @@
 // Connect to database.
-var mongoose = require('mongoose')
-  , database = require('../../config/database');
-mongoose.connect(database.url);
+var pg = require('pg');
+var database = require('../../config/database');
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
-  console.log('Mongoose is running');
-});
+var client = new pg.Client(database.url);
+// client.connect( function callback() {
+//   console.log('Postgres is running');
+// });
+
+module.exports = {
+  query: function(text, values, cb) {
+    client.connect(function(err, client, done) {
+      client.query(text, values, function(err, result) {
+        cb(err, result);
+      });
+    });
+  }
+};
